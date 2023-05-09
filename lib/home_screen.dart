@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_get_x_state_management/screen_one.dart';
 import 'package:get/get.dart';
 
 
@@ -15,114 +16,26 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("GetX Dialog Alert & Botton sheet Using")
+        title: Text(" GetX Navigation Using")
       ),
 
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+           
+           Center(child: TextButton(onPressed: (){
 
+            //* Data Send Next Screen GetX Routes Use
+            Get.toNamed('/screenOne',arguments: [
+              "Somad",
+              "My name is this"
+            ]);
 
+          //* Get.to(ScreenOne(name: "Somad",));                                                  //* <-- This GetX push 
+          //! Navigator.push(context,MaterialPageRoute(builder: (context)=> ScreenOne()));        //* <-- This Flutter default push 
 
-        //* GetX Dialog Alert Code
-          Card(
-            child: ListTile(
-              title: Text("GetX Dialog Alert"),
-              subtitle: Text("Getx dialog alert with getX"),
-              onTap: () {
-                Get.defaultDialog(
-                  title: 'Delet chat',
-                  titlePadding: EdgeInsets.only(top: 20),
-                  contentPadding: EdgeInsets.all(20),
-                  backgroundColor: Colors.yellow,
-                  middleText: "Are you sure you want to delet this chat?",
-                  confirm: TextButton(onPressed: (){
-                    Get.back();
-                  }, child: Text("Ok")),
-                  cancel: TextButton(onPressed: (){
-                    Get.back();
-                  }, child: Text("Cancel")),
-
-                  content: Column(
-                    children: [
-                      Text("Multiple Widget add"),
-                      Text("children"),
-                      Text("or"),
-                      Text("child"),
-                      Text("Ok"),
-                      Text("Cancel"),
-                      Text("Ok"),
-                      Text("Cancel"),
-                    ],
-                  )
-                  
-                );
-              },
-
-            ),
-          ),
-
-
-
-
-        //* GetX Botton sheet Code
-          Card(
-            child: ListTile(
-              title: Text("GetX Botton sheet"),
-              subtitle: Text("Getx Botton sheet with getX"),
-              onTap: () {
-                Get.bottomSheet(
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.circular(30)
-                    ),
-                    child: Column(
-                      children: [
-
-                       const SizedBox(height: 20,),
-
-                       Text("Theme"),
-
-
-                        ListTile(
-                          leading: Icon(Icons.light_mode),
-                          title: Text("Light Theme"),
-                          onTap: () {
-                            Get.changeTheme(ThemeData.light());   //* <-- GetX Light Theme Code
-                          },
-                        ),
-
-
-
-                        ListTile(
-                          leading: Icon(Icons.dark_mode),
-                          title: Text("Dark Theme"),
-                          onTap: () {
-                              Get.changeTheme(ThemeData.dark());   //* <-- GetX Dark Theme Code
-                          },
-                        )
-
-
-
-
-                      ],
-                    ),
-                    
-                  )
-                );
-              },
-
-            ),
-          ),
-
-
-
-
-
-
-
-
-
+           }, child:Text("Go to next screen")))
 
         ],
       ),

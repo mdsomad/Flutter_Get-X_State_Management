@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-- 1: Getx Dialog Alert
+<!-- - 1: Getx Dialog Alert
 - 2: Getx Bottom Sheet
 - 3: Getx Change Light & Dark Theme with GetX Flutter
 
@@ -48,4 +48,4 @@ A new Flutter project.
   
 </tr>
 
-</table>
+</table> -->
