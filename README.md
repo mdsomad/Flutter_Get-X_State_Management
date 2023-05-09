@@ -1,10 +1,10 @@
-# flutter_get_x_state_management
+# Flutter GetX State Management
 
 A new Flutter project.
 
-### Getx Dialog Alert
-### Getx Bottom Sheet
-### Getx Change Light & Dark Theme with GetX Flutter
+- 1: Getx Dialog Alert
+- 2: Getx Bottom Sheet
+- 3: Getx Change Light & Dark Theme with GetX Flutter
 
 
 
@@ -27,21 +27,21 @@ A new Flutter project.
 <tr>
 
 <td>
-  <img src="https://user-images.githubusercontent.com/103892160/237017759-db0978aa-990e-4348-9fd6-a6ebffd4c6a3.png" alt="Getx Dialog Alert View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/29146a9e-1cb2-4943-9700-2b0f14aea9e8" alt="Getx Dialog Alert View Example" width="260"/>
 </td>
 
 <td>
-  <img src="https://user-images.githubusercontent.com/103892160/237017906-15c43ff6-d98c-4bdc-b8af-46b87979b94c.png" alt=" GetX Bottom Sheet View Example" width="260"/>
-</td>
-
-
-<td>
-  <img src="https://user-images.githubusercontent.com/103892160/237017906-15c43ff6-d98c-4bdc-b8af-46b87979b94c.png" alt=" GetX Light Theme View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/361ac888-a05b-47f8-8902-9015ef209c4a" alt=" GetX Bottom Sheet View Example" width="260"/>
 </td>
 
 
 <td>
-  <img src="https://user-images.githubusercontent.com/103892160/237017906-15c43ff6-d98c-4bdc-b8af-46b87979b94c.png" alt=" GetX Dark Theme View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/fe5ba3a9-1004-4a6d-b59f-5e8bfc6177c3" alt=" GetX Light Theme View Example" width="260"/>
+</td>
+
+
+<td>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/48f0fe0a-f7b5-4eb7-bdeb-8b67e13b47cc" alt=" GetX Dark Theme View Example" width="260"/>
 </td>
 
 
@@ -49,8 +49,3 @@ A new Flutter project.
 </tr>
 
 </table>
-
-
-
-
-
