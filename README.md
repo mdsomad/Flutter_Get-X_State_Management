@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-- 1: Getx Navigator & Routes (How to pass data between different screens)
+- 1: [Getx Navigator & Routes (How to pass data between different screens)]
 
 
 
