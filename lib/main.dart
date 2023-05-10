@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_get_x_state_management/home_screen.dart';
-import 'package:flutter_get_x_state_management/screen_one.dart';
-import 'package:flutter_get_x_state_management/screen_tow.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -13,18 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: HomeScreen(),
 
-      //* GetX Routes Using
-      getPages: [
-        GetPage(name: '/' ,page:()=> HomeScreen()),
-        GetPage(name: '/screenOne' ,page:()=> ScreenOne()),
-        GetPage(name: '/screenTow' ,page:()=> ScreenTow()),
-      ],
+
     );
   }
 }

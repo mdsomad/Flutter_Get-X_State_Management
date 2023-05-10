@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_get_x_state_management/screen_one.dart';
 import 'package:get/get.dart';
 
 
@@ -14,28 +13,42 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    //* This Flutter default MediaQuery
+    final heigh = MediaQuery.of(context).size.height *1;
+    final width = MediaQuery.of(context).size.width *1;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(" GetX Navigation Using")
+        title: Text("Get height & Get widh Using")
       ),
 
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-           
-           Center(child: TextButton(onPressed: (){
+          Container(
 
-            //* Data Send Next Screen GetX Routes Use
-            Get.toNamed('/screenOne',arguments: [
-              "Somad",
-              "My name is this"
-            ]);
+            // height: heigh *.6,     //* <-- This Flutter default MediaQuery Use
+            height: Get.height *.4,   //* <-- This GetX Provide MediaQuery Use
+            width: Get.width * .8,    //* <-- This GetX Provide MediaQuery Use
+            color: Colors.red,
 
-          //* Get.to(ScreenOne(name: "Somad",));                                                  //* <-- This GetX push 
-          //! Navigator.push(context,MaterialPageRoute(builder: (context)=> ScreenOne()));        //* <-- This Flutter default push 
+            child: Center(child: Text("GetX & Flutter  default MediaQuery Use",
+            style:TextStyle(fontSize: 18,fontWeight: FontWeight.
+            bold,color: Colors.white),
+            ),)
+            
+          ),
 
-           }, child:Text("Go to next screen")))
+
+
+
+          Container(
+            // height: heigh *.6,     //* <-- This Flutter default MediaQuery Use
+            height: Get.height *.2,   //* <-- This GetX Provide MediaQuery Use
+            width: Get.width *.8,     //* <-- This GetX Provide MediaQuery Use
+            color: Colors.teal,
+            child: Center(child: Text("Center"),)
+          ),
+
 
         ],
       ),
