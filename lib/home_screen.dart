@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_get_x_state_management/counter_controller.dart';
+import 'package:flutter_get_x_state_management/example_two.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,8 +11,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final CounterController controller =
-      Get.put(CounterController()); //* <-- created & initialized
+  
+
+ ExampleTwoController exampleTwoControlle = Get.put(ExampleTwoController());    //* <-- created & initialized
 
   @override
   void initState() {
@@ -25,46 +26,34 @@ class _HomeScreenState extends State<HomeScreen> {
     print("Widget Rebuild");
 
     return Scaffold(
-      appBar: AppBar(title: Text("Counter App")),
 
-      body: Center(child: Obx(() {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+      appBar: AppBar(title: Text("GetX Example Two")),
+
+      body: Column(
+        children: [
+          
+        Obx(() =>  Container(
+            height: 200,
+            width: 200,
+            color: Colors.pink.withOpacity(exampleTwoControlle.opacity.value),
+          ),),
+         
+
+          Obx(() =>  Slider(value: exampleTwoControlle.opacity.value
+          ,onChanged: (value){
+            print(value);
+            exampleTwoControlle.setOpacity(value);
+          }))
+         
+          
             
-            Text("All Widget Rebuild Issue Fix",
-                style: TextStyle(fontSize: 30)),
-
-            const SizedBox(
-              height: 20,
-            ),
-
-            Text(
-              controller.counter.toString(),
-              style: TextStyle(fontSize: 60),
-            ),
-
-          ],
-        );
-
-
-      })
-
-
-    ),
+        ],
+      )
 
 
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          controller.incrementCounter();
-        },
-        child: Icon(Icons.add),
-      ),
 
-
-      
     );
+    
   }
 }
