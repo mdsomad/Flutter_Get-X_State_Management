@@ -1,6 +1,7 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_get_x_state_management/favorite_controller.dart';
+import 'package:flutter_get_x_state_management/image_picker_controller.dart';
 import 'package:get/get.dart';
 
 
@@ -18,7 +19,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   
 
- FavoriteController favoriteController = Get.put(FavoriteController());    //* <-- created & initialized
+ImagePickerController imagePickerController = Get.put(ImagePickerController());    //* <-- created & initialized
  
  
  
@@ -34,34 +35,32 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
 
-      appBar: AppBar(title: Text("GetX Mark Favourite")),
+      appBar: AppBar(title: Text("GetX Image pick")),
 
-      body: ListView.builder(
-        itemCount: favoriteController.fruitList.length ,
-        itemBuilder:(context, index) {
-         return Card(
-           child: ListTile(
-            onTap: () {
+      body: Obx((){
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Center(
+              child: CircleAvatar(
+                radius: 40,
+                backgroundImage: imagePickerController.imagePath.isNotEmpty ?
+                FileImage(File(imagePickerController.imagePath.toString())): null,
+              ),
+            ),
 
-              if(favoriteController.tempFruitList.contains(favoriteController.fruitList[index].toString())){
+            TextButton(onPressed: (){
+                 imagePickerController.getImageCamera();   //* <-- Call This getImageCamera Functon
+            }, child: Text("pick Image Camera")),
 
-                favoriteController.removFromFavorite(favoriteController.fruitList[index].toString());      //* <-- Call This removFromFavorite Function
-
-              }else{
-
-                favoriteController.addToFavorite(favoriteController.fruitList[index].toString());          //* <-- Call This addToFavorite Function
-
-              }
-
-            },
-
-            title: Text(favoriteController.fruitList[index].toString()),
-            trailing:Obx(() => Icon(Icons.favorite,color: favoriteController.tempFruitList.contains(favoriteController.fruitList[index].toString()) ? Colors.red : Colors.white,),)
-           ),
-
-         );
-
-      },)
+            TextButton(onPressed: (){
+                 imagePickerController.getImageGallery();   //* <-- Call This getImageGallery Functon
+            }, child: Text("pick Image Gallery "))
+            
+          ],
+        );
+      })
 
 
 
@@ -71,6 +70,26 @@ class _HomeScreenState extends State<HomeScreen> {
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//* image picker
+//* permission Add This location --> ios/Runner/info.plist
+// <key>NSPhotoLibraryUsageDescription</key>
+// <string>App needs access to photo lib for profile images</string>
+// <key>NSCameraUsageDescription</key>
+// <string>To capture profile photo please grant camera access</string>
 
 
 
