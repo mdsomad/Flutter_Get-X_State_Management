@@ -24,13 +24,13 @@ A new Flutter project.
  
   
 <td>
-  <img src="" alt="No Image Pick View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/ccb9bdeb-cd7a-436c-b820-145eb8c4b48d" alt="No Image Pick View Example" width="260"/>
 </td>
   
   
   
 <td>
-  <img src="" alt="Image Pick View View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/564127c7-6f63-4cad-abc7-2f871ca8a2b3" alt="Image Pick View View Example" width="260"/>
 </td>
 
 
@@ -42,10 +42,6 @@ A new Flutter project.
 </tr>
 
 </table>
-
-
-
-
 
 
 
