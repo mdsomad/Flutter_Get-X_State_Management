@@ -23,13 +23,13 @@ A new Flutter project.
 <tr>
 
 <td>
-  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/35a0547e-6b16-4d90-b816-7ac8ae66e9f5" alt="Slider Value low View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/23288064-8926-4bef-88ba-b2c4846f3f27" alt="Slider Value low View Example" width="260"/>
 </td>
 
 
 
 <td>
-  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/35a0547e-6b16-4d90-b816-7ac8ae66e9f5" alt="Slider Value high View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/f5c5f0d8-9187-45ad-a6de-a398915df226" alt="Slider Value high View Example" width="260"/>
 </td>
 
 
@@ -38,6 +38,4 @@ A new Flutter project.
 </tr>
 
 </table>
-
-
 
