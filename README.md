@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-## GetX State Manamgent with Example
+## GetX State Manamgent with Example Using
 - GetX Counter Example, i.e In this example we will create a simple counter app with getx to increment the value of coutner
 
 
@@ -22,7 +22,7 @@ A new Flutter project.
 <tr>
 
 <td>
-  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/35a0547e-6b16-4d90-b816-7ac8ae66e9f5" alt="All Widget Rebuild Issue Fix View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/5654fec9-ad21-4ad2-9187-aefed7f58123" alt="All Widget Rebuild Issue Fix View Example" width="260"/>
 </td>
 
 
@@ -31,6 +31,4 @@ A new Flutter project.
 </tr>
 
 </table>
-
-
 
