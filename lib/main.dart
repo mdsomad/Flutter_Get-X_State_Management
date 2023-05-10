@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_get_x_state_management/home_screen.dart';
-import 'package:flutter_get_x_state_management/language.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -12,10 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-
-      translations: Languages(),          //* Add This Code
-      locale: Locale('en','US'),          //* <-- Save Value assign this (shared preference use kare to)
-      fallbackLocale: Locale('en','US'),  //* Add This Code
 
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',

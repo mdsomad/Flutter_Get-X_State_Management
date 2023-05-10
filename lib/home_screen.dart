@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,51 +13,54 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
- bool LanguageColor = false;
+  int x = 0;
+
+
+ @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer.periodic(Duration(seconds: 1),(timer){
+      x++;
+      setState(() {
+      });
+    });
+  }
+
+
+  
   
   @override
   Widget build(BuildContext context) {
+    print("Widget Rebuild");
     return Scaffold(
       appBar: AppBar(
-        title: Text("GetX Change App Language Using")
+        title: Text("Why you need to learn Getx")
       ),
 
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-        ListTile(
-          title: Text('message'.tr,style: TextStyle(color:LanguageColor ? Colors.green : Colors.pink),),
-          subtitle: Text('name'.tr,style: TextStyle(color:LanguageColor ? Colors.green : Colors.pink),),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+
+            Text("All Widget Rebuild Issue",style: TextStyle(fontSize: 30)),
+
+            const SizedBox(height: 20,),
+
+            Text(x.toString(),style: TextStyle(fontSize: 60),),
+            
+          ],
         ),
-      
-    const SizedBox(height: 50,),
-      
-      Row(
-        children: [
-
-          OutlinedButton(onPressed: (){
-            LanguageColor = false;
-            Get.updateLocale(Locale('en','US'));
-          }, child: Text("English")),
-      
-         const SizedBox(width: 20,),
-      
-          OutlinedButton(onPressed: (){
-              LanguageColor = true;
-             Get.updateLocale(Locale('hi','IN'));
-          }, child: Text("Hindi"))
+      ),
 
 
-        ],
-      )
-      
-      
-  ],
-),
-
-
-      
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        x++;
+        setState(() {
+          
+        });
+      },child: Icon(Icons.add),),
       
       
       
