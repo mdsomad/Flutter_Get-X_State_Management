@@ -2,19 +2,34 @@
 
 A new Flutter project.
 
-- 1: Get height & Get widh
+- [Supported languages codes website link Click Now](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html)
+
+- Example This Code
+MaterialApp(
+  localizationsDelegates: GlobalMaterialLocalizations.delegates,
+  supportedLocales: [
+    const Locale('en', 'US'), // American English
+    const Locale('he', 'IL'), // Israeli Hebrew
+    // ...
+  ],
+  // ...
+)
 
 
 
-## Flutter And GetX MediaQuery Use Ui Preview
+- 1: GetX Localization Change the Language of the App i.g Englihs, Hindi, Urdu
+
+
+
+## GetX Change App Language Ui Preview
 
 
 <table>
   
   
 <tr>                    
-   <th> MediaQuery View</th>
-
+   <th>App Language English View</th>
+   <th>App Language Hindi View</th>
 </tr>  
   
   
@@ -22,7 +37,10 @@ A new Flutter project.
 <tr>
 
 <td>
-  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/15db4311-d9d2-49db-8bb3-9239bc7c15fa" alt="MediaQuery View Example" width="260"/>
+  <img src="" alt="App Language English View Example" width="260"/>
+</td>
+<td>
+  <img src="" alt="App Language Hindi View Example" width="260"/>
 </td>
 
 

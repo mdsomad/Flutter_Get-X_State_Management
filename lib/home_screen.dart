@@ -11,47 +11,49 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+ bool LanguageColor = false;
+  
   @override
   Widget build(BuildContext context) {
-    //* This Flutter default MediaQuery
-    final heigh = MediaQuery.of(context).size.height *1;
-    final width = MediaQuery.of(context).size.width *1;
-
     return Scaffold(
       appBar: AppBar(
-        title: Text("Get height & Get widh Using")
+        title: Text("GetX Change App Language Using")
       ),
 
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
+        ListTile(
+          title: Text('message'.tr,style: TextStyle(color:LanguageColor ? Colors.green : Colors.pink),),
+          subtitle: Text('name'.tr,style: TextStyle(color:LanguageColor ? Colors.green : Colors.pink),),
+        ),
+      
+    const SizedBox(height: 50,),
+      
+      Row(
+        children: [
 
-            // height: heigh *.6,     //* <-- This Flutter default MediaQuery Use
-            height: Get.height *.4,   //* <-- This GetX Provide MediaQuery Use
-            width: Get.width * .8,    //* <-- This GetX Provide MediaQuery Use
-            color: Colors.red,
-
-            child: Center(child: Text("GetX & Flutter  default MediaQuery Use",
-            style:TextStyle(fontSize: 18,fontWeight: FontWeight.
-            bold,color: Colors.white),
-            ),)
-            
-          ),
-
-
-
-
-          Container(
-            // height: heigh *.6,     //* <-- This Flutter default MediaQuery Use
-            height: Get.height *.2,   //* <-- This GetX Provide MediaQuery Use
-            width: Get.width *.8,     //* <-- This GetX Provide MediaQuery Use
-            color: Colors.teal,
-            child: Center(child: Text("Center"),)
-          ),
+          OutlinedButton(onPressed: (){
+            LanguageColor = false;
+            Get.updateLocale(Locale('en','US'));
+          }, child: Text("English")),
+      
+         const SizedBox(width: 20,),
+      
+          OutlinedButton(onPressed: (){
+              LanguageColor = true;
+             Get.updateLocale(Locale('hi','IN'));
+          }, child: Text("Hindi"))
 
 
         ],
-      ),
+      )
+      
+      
+  ],
+),
 
 
       
