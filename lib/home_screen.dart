@@ -84,12 +84,7 @@ ImagePickerController imagePickerController = Get.put(ImagePickerController()); 
 
 
 
-//* image picker
-//* permission Add This location --> ios/Runner/info.plist
-// <key>NSPhotoLibraryUsageDescription</key>
-// <string>App needs access to photo lib for profile images</string>
-// <key>NSCameraUsageDescription</key>
-// <string>To capture profile photo please grant camera access</string>
+
 
 
 
