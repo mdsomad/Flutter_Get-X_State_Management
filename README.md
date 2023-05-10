@@ -3,19 +3,19 @@
 A new Flutter project.
 
 ## GetX State Manamgent with Example
-- GetX Example Three
+- Favourite App with GetX
 
 
 
-## All Widget Not Rebuild Ui Preview
+## Favourite Functionality Implement App Ui Preview
 
 
 <table>
   
   
 <tr>  
-   <th>Switch Button OFF View</th>
-   <th>Switch Button ON View</th>
+   <th>No Favourite View</th>
+   <th>Add Favourite View</th>
 </tr>  
   
   
@@ -24,13 +24,13 @@ A new Flutter project.
  
   
 <td>
-  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/6d7951c4-8140-45ea-9f0f-bfeec7caf2a2" alt="Switch Button OFF View Example" width="260"/>
+  <img src="" alt="No Favourite View Example" width="260"/>
 </td>
   
   
   
 <td>
-  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/eb215c89-e967-423c-9386-df67be86a033" alt="Switch Button ON View Example" width="260"/>
+  <img src="" alt="Favourite View Example" width="260"/>
 </td>
 
 
