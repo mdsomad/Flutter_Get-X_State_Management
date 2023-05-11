@@ -27,18 +27,18 @@ A new Flutter project.
  
   
 <td>
-  <img src=" " alt="Loading View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/7a77200f-3403-4dea-8f20-2599741a59c4" alt="Loading View Example" width="260"/>
 </td>
   
   
   
 <td>
-  <img src=" " alt="Login Successfully View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/d9e2a051-aba7-4510-91cf-53f116ae4531" alt="Login Successfully View Example" width="260"/>
 </td>
 
 
 <td>
-  <img src=" " alt="Login Faield View Example" width="260"/>
+  <img src="https://github.com/mdsomad/Flutter_Get-X_State_Management/assets/103892160/dd694745-236b-4797-bdde-d32131a9ea02" alt="Login Faield View Example" width="260"/>
 </td>
 
 
@@ -48,8 +48,6 @@ A new Flutter project.
 
   
 </tr>
-
-</table>
 
 
 
