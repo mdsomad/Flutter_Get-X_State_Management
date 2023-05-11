@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_get_x_state_management/image_picker_controller.dart';
+import 'package:flutter_get_x_state_management/login_controller.dart';
 import 'package:get/get.dart';
 
 
@@ -19,7 +19,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   
 
-ImagePickerController imagePickerController = Get.put(ImagePickerController());    //* <-- created & initialized
+LoginController loginController = Get.put(LoginController());
  
  
  
@@ -35,37 +35,59 @@ ImagePickerController imagePickerController = Get.put(ImagePickerController()); 
 
     return Scaffold(
 
-      appBar: AppBar(title: Text("GetX Image pick")),
+      appBar: AppBar(title: Text("GetX Login Screen")),
 
-      body: Obx((){
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Center(
-              child: CircleAvatar(
-                radius: 40,
-                backgroundImage: imagePickerController.imagePath.isNotEmpty ?
-                FileImage(File(imagePickerController.imagePath.toString())): null,
+      body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              
+              TextFormField(
+                controller: loginController.emaiController.value,
+                decoration: InputDecoration(
+                  hintText: "Email"
+                ),
               ),
-            ),
+              TextFormField(
+                controller: loginController.passwordController.value,
+                decoration: InputDecoration(
+                  hintText: "Password"
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
 
-            TextButton(onPressed: (){
-                 imagePickerController.getImageCamera();   //* <-- Call This getImageCamera Functon
-            }, child: Text("pick Image Camera")),
+              Obx(() {
+                
+              return InkWell(
+                onTap: (){
+                  loginController.loginApi();
+                },
+                child: loginController.loading.value ? CircularProgressIndicator() : Container(
+                  height: 45,
+                  color: Colors.green,
+                  child: Center(
+                    child: Text("Login"),
+                  ),
+                ),
+              );
 
-            TextButton(onPressed: (){
-                 imagePickerController.getImageGallery();   //* <-- Call This getImageGallery Functon
-            }, child: Text("pick Image Gallery "))
-            
-          ],
-        );
-      })
+              }
+             )
+              
+            ],
+          ),
+        )
+      );
+    
 
 
 
 
-    );
+    
 
   }
   
